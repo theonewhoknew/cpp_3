@@ -10,7 +10,7 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 }
 
 ScavTrap::ScavTrap(ScavTrap &copy) : ClapTrap(copy)
-{	
+{
 	_name = copy._name;
 	_hitPoints = copy._hitPoints;
 	_energyPoints = copy._energyPoints;
