@@ -1,5 +1,5 @@
-NAME = claptrap
-SRC = $(addprefix $(DIR_SRC), main.cpp ClapTrap.cpp)
+NAME = scavtrap
+SRC = $(addprefix $(DIR_SRC), main.cpp ClapTrap.cpp ScavTrap.cpp)
 FLAGS = -std=c++98 -Wall -Wextra -Werror
 DEPFLAGS = -MMD -MP
 DIR_OBJ = tmp/
