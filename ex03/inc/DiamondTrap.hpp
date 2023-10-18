@@ -2,7 +2,6 @@
 # define DIAMONDTRAP_HPP
 
 # include <iostream>
-# include "ClapTrap.hpp"
 # include "ScavTrap.hpp"
 # include "FragTrap.hpp"
 
@@ -14,12 +13,11 @@ private:
 
 public:
 	DiamondTrap(std::string name);
-	DiamondTrap(DiamondTrap &copy);
-	DiamondTrap& operator=(const DiamondTrap &instance);
 	virtual ~DiamondTrap();
 
-	void takeDamage(unsigned int amount);
-	void beRepaired(unsigned int amount);
+	using ScavTrap::attack;
+	void whoAmI();
+	
 };
 
 #endif
