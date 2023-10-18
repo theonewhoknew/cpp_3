@@ -8,13 +8,13 @@ int main( void )
 	int i = 0;
 	ClapTrap Y("Y");
 	ScavTrap X("X");
-	ScavTrap Z(X);
+	ScavTrap Xcopy(X);
 
 	X.guardGate();
 
 	X.takeDamage(5);
 	Y.takeDamage(5);
-	Z.takeDamage(5);
+	Xcopy.takeDamage(5);
 	while (i != 50)
 	{
 		X.attack("Y");
