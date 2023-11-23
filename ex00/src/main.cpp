@@ -38,6 +38,7 @@ int main( void )
 	ClapTrap John("John");
 	ClapTrap Paul("Paul");
 
+	John.beRepaired(1);
 	for (int i = 0; i < 11; i++)
 		John.attack("Paul");
 

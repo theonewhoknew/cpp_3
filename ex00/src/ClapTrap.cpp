@@ -74,6 +74,8 @@ void ClapTrap::beRepaired(unsigned int amount)
 {	
 	if (_hitPoints < 1)
 		std::cout << "ClapTrap " << _name << " is dead! It can't repair itself!" << std::endl;
+	else if (_hitPoints == 10)
+		std::cout << "ClapTrap " << _name << " is already full health!" << std::endl;
 	else if (_energyPoints < 1)
 		std::cout << "ClapTrap " << _name << " is out of energy! It can't repair itself!" << std::endl;
 	else
