@@ -5,19 +5,20 @@
 #include <iostream>
 
 int main( void ) 
-{
-	ClapTrap Y("Y");
-	ScavTrap X("X");
-	FragTrap Z("Z");
+{	
+	/*TESTS*/
+	FragTrap John("John");
+	FragTrap Paul("Paul");
 
-	FragTrap A(Z);
+	John.attack(Paul.getName());
+	Paul.takeDamage(30);
 
-	A.takeDamage(99);
-	A.attack("Z");
-	Z.takeDamage(30);
+	FragTrap Ringo(Paul);
 
-	X.attack("Y");
-	Y.takeDamage(20);
+	Ringo.beRepaired(10);
+
+	for(int i = 0; i < 101; i++)
+		Ringo.attack("The air");
 
 	return (0);
 }

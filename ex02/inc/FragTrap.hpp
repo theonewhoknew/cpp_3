@@ -9,7 +9,10 @@ class FragTrap : public ClapTrap
 
 
 public:
+	FragTrap();
 	FragTrap(std::string name);
+	FragTrap(FragTrap &copy);
+	FragTrap& operator=(const FragTrap &instance);
 	virtual ~FragTrap();
 
 	void highFivesGuys(void);

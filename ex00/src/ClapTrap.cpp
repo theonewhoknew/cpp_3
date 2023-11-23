@@ -20,7 +20,7 @@ ClapTrap::ClapTrap(std::string name)
 
 ClapTrap::ClapTrap(ClapTrap &copy)
 {	
-	std::cout << "Copy constructor called" << std::endl;
+	std::cout << "ClapTrap copy constructor called" << std::endl;
 	_name = copy._name;
 	_hitPoints = copy._hitPoints;
 	_energyPoints = copy._energyPoints;
@@ -29,7 +29,7 @@ ClapTrap::ClapTrap(ClapTrap &copy)
 
 ClapTrap& ClapTrap::operator=(const ClapTrap &instance)
 {	
-	std::cout << "Copy assignment operator called" << std::endl;
+	std::cout << "ClapTrap copy assignment operator called" << std::endl;
 	_name = instance._name;
 	_hitPoints = instance._hitPoints;
 	_energyPoints = instance._energyPoints;
