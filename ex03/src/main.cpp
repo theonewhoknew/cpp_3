@@ -14,11 +14,22 @@ int main( void )
 		Diamond.whoAmI();
 		Diamond.attack("Itself");
 		Diamond.takeDamage(30);
+		Diamond.takeDamage(30);
+
+		DiamondTrap Diamond_copy(Diamond);
+
+		Diamond_copy.takeDamage(30);
+
+		DiamondTrap assign;
+
+		assign = Diamond_copy;
+
+		assign.takeDamage(10);
 	}
-	{
+/* 	{
 		DiamondTrap John("John");
-/* 		for(int i = 0; i < 101; i++)
-			John.attack("The air"); */
-	}
+		for(int i = 0; i < 51; i++)
+			John.attack("The air");
+	} */
 	return (0);
 }

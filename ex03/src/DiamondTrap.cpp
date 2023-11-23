@@ -23,23 +23,24 @@ DiamondTrap::DiamondTrap(std::string name) : ScavTrap(name), FragTrap(name)
 	std::cout << "DiamondTrap " << _name << " was created!" << std::endl;
 }
 
-DiamondTrap::DiamondTrap(DiamondTrap &copy) : ClapTrap(copy._name), ScavTrap(copy._name), FragTrap(copy._name)
+DiamondTrap::DiamondTrap(DiamondTrap &copy) : ScavTrap(copy), FragTrap(copy)
 {	
 	std::cout << "DiamondTrap copy constructor called" << std::endl;
 	ClapTrap::_name = copy._name + "_clap_name";
-	_energyPoints = copy.ScavTrap::_energyPoints;
-	_hitPoints = copy.FragTrap::_hitPoints;
-	_attackDamage = copy.FragTrap::_attackDamage;
+	_energyPoints = copy._energyPoints;
+	_hitPoints = copy._hitPoints;
+	_attackDamage = copy._attackDamage;
 }
 
 DiamondTrap& DiamondTrap::operator=(const DiamondTrap &instance)
 {	
 	std::cout << "DiamondTrap copy assignment operator called" << std::endl;
+	ClapTrap::operator=(instance);
 	_name = instance._name;
 	ClapTrap::_name = instance._name + "_clap_name";
-	_hitPoints = instance.FragTrap::_hitPoints;
-	_energyPoints = instance.ScavTrap::_energyPoints;
-	_attackDamage = instance.FragTrap::_attackDamage;
+	_hitPoints = instance._hitPoints;
+	_energyPoints = instance._energyPoints;
+	_attackDamage = instance._attackDamage;
 	return (*this);
 }
 
