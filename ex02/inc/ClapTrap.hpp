@@ -12,6 +12,7 @@ protected:
 	int			_attackDamage;
 
 public:
+	ClapTrap();
 	ClapTrap(std::string name);
 	ClapTrap(ClapTrap &copy);
 	ClapTrap& operator=(const ClapTrap &instance);
