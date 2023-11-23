@@ -13,12 +13,24 @@ int main( void )
 	John.attack(Paul.getName());
 	Paul.takeDamage(30);
 
-	FragTrap Ringo(Paul);
+	Paul.beRepaired(10);
 
-	Ringo.beRepaired(10);
+	Paul.highFivesGuys();
 
 	for(int i = 0; i < 101; i++)
-		Ringo.attack("The air");
+		Paul.attack("The air");
+
+	FragTrap Ringo(Paul);
+
+	Ringo.attack("The air");
+
+	FragTrap George("George");
+
+	George.attack("The air");
+
+	George = John;
+
+	George.attack("The air");
 
 	return (0);
 }
