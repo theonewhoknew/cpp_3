@@ -26,10 +26,10 @@ int main( void )
 
 		assign.takeDamage(10);
 	}
-/* 	{
+	{
 		DiamondTrap John("John");
 		for(int i = 0; i < 51; i++)
 			John.attack("The air");
-	} */
+	} 
 	return (0);
 }
