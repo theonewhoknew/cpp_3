@@ -42,6 +42,11 @@ ClapTrap::~ClapTrap()
 	std::cout << "ClapTrap destructor called." << std::endl;
 }
 
+std::string ClapTrap::getName(void)
+{
+	return(this->_name);
+}
+
 void ClapTrap::attack(const std::string& target)
 {	
 	if (_hitPoints < 1)

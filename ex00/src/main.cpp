@@ -12,7 +12,7 @@ int main( void )
 	ClapTrap default_claptrap;
 	ClapTrap John("John");
 
-	default_claptrap.attack("John");
+	default_claptrap.attack(John.getName());
 	John.takeDamage(0);
 
 	John.takeDamage(1);
@@ -40,14 +40,14 @@ int main( void )
 
 	John.beRepaired(1);
 	for (int i = 0; i < 11; i++)
-		John.attack("Paul");
+		John.attack(Paul.getName());
 
 	for (int i = 0; i < 20; i++)
 	{	
 		Paul.takeDamage(1);
 		Paul.beRepaired(1);
 	}
-	Paul.attack("John");
+	Paul.attack(John.getName());
 	Paul.takeDamage(1);
 
 }
