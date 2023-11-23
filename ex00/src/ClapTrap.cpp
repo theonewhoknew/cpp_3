@@ -1,7 +1,20 @@
 #include "../inc/ClapTrap.hpp"
 
-ClapTrap::ClapTrap(std::string name) : _name(name), _hitPoints(10), _energyPoints(10), _attackDamage(0)
-{
+ClapTrap::ClapTrap()
+{	
+	_name = "default";
+	_hitPoints = 10;
+	_energyPoints = 10;
+	_attackDamage = 0;
+	std::cout << "ClapTrap " << _name << " was created!" << std::endl;
+}
+
+ClapTrap::ClapTrap(std::string name)
+{	
+	_name = name;
+	_hitPoints = 10;
+	_energyPoints = 10;
+	_attackDamage = 0;
 	std::cout << "ClapTrap " << _name << " was created!" << std::endl;
 }
 
@@ -27,11 +40,6 @@ ClapTrap& ClapTrap::operator=(const ClapTrap &copy)
 ClapTrap::~ClapTrap()
 {
 	std::cout << "ClapTrap destructor called." << std::endl;
-}
-
-std::string ClapTrap::getName(void)
-{
-	return(this->_name);
 }
 
 void ClapTrap::attack(const std::string& target)
