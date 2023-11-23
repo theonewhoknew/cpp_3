@@ -4,24 +4,27 @@
 #include <iostream>
 
 int main( void ) 
-{
-	int i = 0;
-	ClapTrap Y("Y");
-	ScavTrap X("X");
-	ScavTrap Xcopy(X);
+{	
+	/*TEST*/
+	std::cout << "CANONICAL TEST" << std::endl;
 
-	X.guardGate();
+	ScavTrap John("John");
+	ScavTrap Paul("Paul");
 
-	X.takeDamage(5);
-	Y.takeDamage(5);
-	Xcopy.takeDamage(5);
-	while (i != 50)
-	{
-		X.attack("Y");
-		i++;
-	}
-	X.attack("Y");
-	Y.takeDamage(20);
+	John.attack(Paul.getName());
+	Paul.takeDamage(20);
+
+	ClapTrap Ringo("Ringo");
+
+	Ringo = Paul;
+
+	Ringo.takeDamage(1);
+
+	Paul.guardGate();
+
+	Paul = John;
+
+	Paul.guardGate();
 
 	return (0);
 }

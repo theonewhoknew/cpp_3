@@ -1,7 +1,20 @@
 #include "../inc/ClapTrap.hpp"
 
-ClapTrap::ClapTrap(std::string name) : _name(name), _hitPoints(10), _energyPoints(10), _attackDamage(0)
-{
+ClapTrap::ClapTrap()
+{	
+	_name = "default";
+	_hitPoints = 10;
+	_energyPoints = 10;
+	_attackDamage = 0;
+	std::cout << "ClapTrap " << _name << " was created!" << std::endl;
+}
+
+ClapTrap::ClapTrap(std::string name)
+{	
+	_name = name;
+	_hitPoints = 10;
+	_energyPoints = 10;
+	_attackDamage = 0;
 	std::cout << "ClapTrap " << _name << " was created!" << std::endl;
 }
 
@@ -14,13 +27,13 @@ ClapTrap::ClapTrap(ClapTrap &copy)
 	_attackDamage = copy._attackDamage;
 }
 
-ClapTrap& ClapTrap::operator=(const ClapTrap &copy)
+ClapTrap& ClapTrap::operator=(const ClapTrap &instance)
 {	
 	std::cout << "Copy assignment operator called" << std::endl;
-	_name = copy._name;
-	_hitPoints = copy._hitPoints;
-	_energyPoints = copy._energyPoints;
-	_attackDamage = copy._attackDamage;
+	_name = instance._name;
+	_hitPoints = instance._hitPoints;
+	_energyPoints = instance._energyPoints;
+	_attackDamage = instance._attackDamage;
 	return (*this);
 }
 
@@ -66,6 +79,8 @@ void ClapTrap::beRepaired(unsigned int amount)
 {	
 	if (_hitPoints < 1)
 		std::cout << "ClapTrap " << _name << " is dead! It can't repair itself!" << std::endl;
+	else if (_hitPoints == 10)
+		std::cout << "ClapTrap " << _name << " is already full health!" << std::endl;
 	else if (_energyPoints < 1)
 		std::cout << "ClapTrap " << _name << " is out of energy! It can't repair itself!" << std::endl;
 	else
