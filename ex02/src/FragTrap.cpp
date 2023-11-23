@@ -17,10 +17,9 @@ FragTrap::FragTrap(std::string name) : ClapTrap(name)
 	std::cout << "FragTrap " << _name << " was created!" << std::endl;
 }
 
-FragTrap::FragTrap(FragTrap &copy)
+FragTrap::FragTrap(FragTrap &copy) : ClapTrap(copy._name)
 {	
 	std::cout << "FragTrap copy constructor called" << std::endl;
-	_name = copy._name;
 	_hitPoints = copy._hitPoints;
 	_energyPoints = copy._energyPoints;
 	_attackDamage = copy._attackDamage;

@@ -7,10 +7,18 @@
 
 int main( void ) 
 {
-	DiamondTrap A("Diamond");
-	A.guardGate();
-	A.highFivesGuys();
-	A.whoAmI();
-	A.attack("You");
+	{
+		DiamondTrap Diamond;
+		Diamond.guardGate();
+		Diamond.highFivesGuys();
+		Diamond.whoAmI();
+		Diamond.attack("Itself");
+		Diamond.takeDamage(30);
+	}
+	{
+		DiamondTrap John("John");
+/* 		for(int i = 0; i < 101; i++)
+			John.attack("The air"); */
+	}
 	return (0);
 }

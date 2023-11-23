@@ -26,5 +26,9 @@ int main( void )
 
 	Paul.guardGate();
 
+	ClapTrap George(John);
+
+	George.attack(Ringo.getName());
+
 	return (0);
 }
